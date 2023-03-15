@@ -51,7 +51,3 @@ Requirement 1.4 states the need for a post functionality. This was easy to do wi
 But how to store the urls? From a design perspective, there are two ways to store this, one is to create a saparate photo table like the post table, the another is to store them with the post entries. Since these are just urls that takes very small storage space and that a post with >1000 photos doesn't make sense realistically, the ease of querying with the post entry, which is the majority use case, persuaded me to go with the second approach. Plus, Postgre has a convenient ARRAY datatype that makes this approach very easy to implement.
 
 Although the requriement does not mention deleting posts or users, I still implemented them to demonstrate my ability to complete this task.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,0 +1,29 @@
+{
+  "name": "purematch",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "devStart": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1335.0",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "~1.9.1",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.29.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "sequelize-cli": "^6.6.0"
+  }
+}

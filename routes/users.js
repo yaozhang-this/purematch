@@ -24,8 +24,9 @@ router.post("/", async (req, res, next) => {
   };
 
   try {
-    created_user = await User.create(usr);
-    res.status(201).json(created_user);
+    createdUser = await User.create(usr);
+    const { id, name, email } = createdUser;
+    res.status(201).json({ id, name, email });
   } catch (err) {
     res.status(409).json({ msg: "Email already exists" });
   }

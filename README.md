@@ -1,6 +1,6 @@
 # Purematch Coding Challenge
 
-This repository hosts the NodeJS app source code of Purematch coding challenge.
+This repository hosts the NodeJS app source code of Purematch coding challenge. For previous requirement infomration, please check out respective branches.
 
 ## Installation, Build and Test
 

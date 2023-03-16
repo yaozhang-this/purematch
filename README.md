@@ -15,7 +15,7 @@ To run in development, type `npm run devStart` which uses nodemon to automatical
 ## Usage
 
 Examples on using this NodeJS app is documented in the file `requests.rest`, which helps test HTTP request locally.
-But below is a simple request to register a user with server running on location host listening on port 3000.
+But below is a simple request to register a user with server running on local host listening on port 3000.
 
 ```
 POST http://localhost:3000/users/

@@ -4,7 +4,16 @@
   "private": true,
   "scripts": {
     "devStart": "nodemon ./bin/www",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "config": "node src/config.js",
+    "_migrate": "sequelize db:migrate",
+    "_migrate:status": "sequelize db:migrate:status",
+    "_migrate:undo": "sequelize db:migrate:undo",
+    "_seed": "sequelize db:seed:all",
+    "migrate": "npm-run-all config _migrate",
+    "migrate:status": "npm-run-all config _migrate:status",
+    "migrate:undo": "npm-run-all config _migrate:undo",
+    "seed": "npm-run-all config _seed"
   },
   "engines": {
     "node": ">=16.0.0"

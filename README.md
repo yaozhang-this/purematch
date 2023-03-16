@@ -45,3 +45,9 @@ Pagination is a useful tool for users of this API. However, as backend developer
 As username is said to be optional, I assumed that it is nullable. And by intuition I assumed it to be unique. I created migration files so that the new column is added to database and the user model is adjusted to fit the new column.
 
 In a AGILE manner, all of these changes do not break previous versions but progressively add functionality to the app.
+
+### AWS Deployment
+
+For this challenge, I configured a fresh AWS free tier account with a IAM user set to dev role. I used AWS Elastic Beanstalk to host the NodeJS & express app. The EB environment has a EC2 instance and connects to AWS RDS database with Postgres driver via Sequelize. The EB environment uses a AWS bucket to store source code bundle. The NodeJs app itself also uses a AWS S3 bucket to store user iamges. I installed eb cli so it is very easy to deploy from local machine. But there could be many improvment in a real production environment, such as using the AWS CodePipeline for CI/CD the dev cycle. We can also use that to automatically migrate database upon each deploy.
+
+Currently, all sensitive data, including JWT secret key and database connection info, are stored inside EB Environment as environment variables and are not exposed to public, but in a production environment, it is best to use AWS SecretManager for retrieving secrets on each use for maximum security.

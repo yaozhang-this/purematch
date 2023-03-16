@@ -70,7 +70,7 @@ router.get("/:id", auth, async (req, res, next) => {
       res.status(404).json({ msg: "Post not found" });
       return;
     }
-    posts = utilities.addDiffTimeToQueryResults(posts);
+    posts = utilities.addDiffTimeToQueryResults([posts]);
     res.status(200).json(posts);
   } catch (err) {
     res.status(500).json({ msg: "Server Error: " + err });

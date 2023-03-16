@@ -4,16 +4,7 @@
   "private": true,
   "scripts": {
     "devStart": "nodemon ./bin/www",
-    "start": "node ./bin/www",
-    "config": "node config/config.js",
-    "_migrate": "sequelize db:migrate",
-    "_migrate:status": "sequelize db:migrate:status",
-    "_migrate:undo": "sequelize db:migrate:undo",
-    "_seed": "sequelize db:seed:all",
-    "migrate": "npm-run-all config _migrate",
-    "migrate:status": "npm-run-all config _migrate:status",
-    "migrate:undo": "npm-run-all config _migrate:undo",
-    "seed": "npm-run-all config _seed"
+    "start": "node ./bin/www"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -33,10 +24,10 @@
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.29.3",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "sequelize-cli": "^6.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.21",
-    "sequelize-cli": "^6.6.0"
+    "nodemon": "^2.0.21"
   }
 }

@@ -31,7 +31,7 @@ router.post("/", async (req, res, next) => {
     const { id, name, email } = createdUser;
     res.status(201).json({ id, name, email });
   } catch (err) {
-    res.status(409).json({ msg: "Email already exists" });
+    res.status(500).json({ msg: "Server Error " + err });
   }
 });
 

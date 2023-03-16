@@ -24,10 +24,10 @@
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.29.3",
-    "uuid": "^9.0.0",
-    "sequelize-cli": "^6.6.0"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "sequelize-cli": "^6.6.0",
     "nodemon": "^2.0.21"
   }
 }
